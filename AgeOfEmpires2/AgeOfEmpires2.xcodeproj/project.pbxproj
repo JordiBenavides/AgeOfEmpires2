@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,7 +48,6 @@
 				C84384F532625CCD7FDF286C /* Pods-AgeOfEmpires2.debug.xcconfig */,
 				191E6CB587FE515B33EEA29B /* Pods-AgeOfEmpires2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +72,63 @@
 		9DA7BB3F255EEC7600BC81E2 /* AgeOfEmpires2 */ = {
 			isa = PBXGroup;
 			children = (
-				9DA7BB40255EEC7600BC81E2 /* AppDelegate.swift */,
-				9DA7BB42255EEC7600BC81E2 /* SceneDelegate.swift */,
+				9DA7BB58255EEFE100BC81E2 /* Application */,
+				9DA7BB56255EEFB900BC81E2 /* Model */,
+				9DA7BB57255EEFC200BC81E2 /* Network */,
+				9DA7BB54255EEF9600BC81E2 /* Controller */,
+				9DA7BB59255EEFF500BC81E2 /* Resources */,
+			);
+			path = AgeOfEmpires2;
+			sourceTree = "<group>";
+		};
+		9DA7BB54255EEF9600BC81E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				9DA7BB44255EEC7600BC81E2 /* ViewController.swift */,
+				9DA7BB55255EEFA600BC81E2 /* Cell */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9DA7BB55255EEFA600BC81E2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9DA7BB56255EEFB900BC81E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DA7BB57255EEFC200BC81E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9DA7BB58255EEFE100BC81E2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9DA7BB4E255EEC7C00BC81E2 /* Info.plist */,
+				9DA7BB42255EEC7600BC81E2 /* SceneDelegate.swift */,
+				9DA7BB40255EEC7600BC81E2 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9DA7BB59255EEFF500BC81E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				9DA7BB46255EEC7600BC81E2 /* Main.storyboard */,
 				9DA7BB49255EEC7C00BC81E2 /* Assets.xcassets */,
 				9DA7BB4B255EEC7C00BC81E2 /* LaunchScreen.storyboard */,
-				9DA7BB4E255EEC7C00BC81E2 /* Info.plist */,
 			);
-			path = AgeOfEmpires2;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B3113D313FDB4797E8CF5781 /* Frameworks */ = {
@@ -355,7 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AgeOfEmpires2/Info.plist;
+				INFOPLIST_FILE = AgeOfEmpires2/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AgeOfEmpires2/Info.plist;
+				INFOPLIST_FILE = AgeOfEmpires2/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
