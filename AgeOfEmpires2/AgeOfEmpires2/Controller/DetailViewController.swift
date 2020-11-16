@@ -6,25 +6,41 @@
 //  Copyright © 2020 Jordi Milla Catalan. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import Moya
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var team_bonusLabel: UILabel!
+    
+    let provider = MoyaProvider<CivilizationsAPI>()
+    var id: Int?
+    var data: Civilizations?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        requestCiviById()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateLabels(){
+        nameLabel.text = data?.name
+        team_bonusLabel.text = data?.team_bonus
     }
-    */
+    
+    func requestCiviById() {
 
+        provider.request(.getCiviById(id: id ?? 1)) { result in
+            switch result {
+            case .success(let response):
+                print("success")
+                let array : Civilizations = try! response.map(Civilizations.self)
+                self.data = array
+                self.updateLabels()
+            case .failure:
+                print("Error")
+            }
+        }
+    }
 }

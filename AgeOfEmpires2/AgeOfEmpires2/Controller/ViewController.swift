@@ -19,8 +19,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         requestCivilization()
         setTable()
+        
     }
     
     func setTable() {
@@ -62,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
-        //vc.data = data?[indexPath.row]
+        vc.id = data?[indexPath.row].id
             navigationController?.pushViewController(vc,
                                                animated: true)
     }

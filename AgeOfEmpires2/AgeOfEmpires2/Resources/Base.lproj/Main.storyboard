@@ -45,9 +45,61 @@
                     <view key="view" contentMode="scaleToFill" id="fza-cu-BIZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymW-Bb-BXH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzj-nO-lMS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="609.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5k-T9-UBa">
+                                                <rect key="frame" x="0.0" y="30" width="414" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-15-EMg">
+                                                <rect key="frame" x="20" y="490" width="374" height="119.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="M5k-T9-UBa" firstAttribute="top" secondItem="zzj-nO-lMS" secondAttribute="top" constant="30" id="4ry-Qs-RFx"/>
+                                            <constraint firstAttribute="bottom" secondItem="4VT-15-EMg" secondAttribute="bottom" id="SlH-r8-H3E"/>
+                                            <constraint firstItem="4VT-15-EMg" firstAttribute="top" secondItem="M5k-T9-UBa" secondAttribute="bottom" constant="400" id="ha7-YE-VOy"/>
+                                            <constraint firstItem="M5k-T9-UBa" firstAttribute="leading" secondItem="zzj-nO-lMS" secondAttribute="leading" id="iN4-Yk-gFN"/>
+                                            <constraint firstAttribute="trailing" secondItem="M5k-T9-UBa" secondAttribute="trailing" id="jNn-nL-7QE"/>
+                                            <constraint firstAttribute="trailing" secondItem="4VT-15-EMg" secondAttribute="trailing" constant="20" id="tOj-wd-sv5"/>
+                                            <constraint firstItem="4VT-15-EMg" firstAttribute="leading" secondItem="zzj-nO-lMS" secondAttribute="leading" constant="20" id="uFn-Rw-ZnX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zzj-nO-lMS" firstAttribute="top" secondItem="ymW-Bb-BXH" secondAttribute="top" id="8oT-dq-E3j"/>
+                                    <constraint firstItem="zzj-nO-lMS" firstAttribute="leading" secondItem="ymW-Bb-BXH" secondAttribute="leading" id="9hh-Nn-ZqY"/>
+                                    <constraint firstAttribute="trailing" secondItem="zzj-nO-lMS" secondAttribute="trailing" id="CHm-gv-LtR"/>
+                                    <constraint firstAttribute="bottom" secondItem="zzj-nO-lMS" secondAttribute="bottom" id="h0n-Hf-U2j"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zzj-nO-lMS" firstAttribute="width" secondItem="fza-cu-BIZ" secondAttribute="width" id="0Lv-lL-NQF"/>
+                            <constraint firstItem="Hds-Zs-ILV" firstAttribute="bottom" secondItem="ymW-Bb-BXH" secondAttribute="bottom" id="Keo-UZ-CwL"/>
+                            <constraint firstItem="zzj-nO-lMS" firstAttribute="height" secondItem="fza-cu-BIZ" secondAttribute="height" priority="250" id="V0v-Ok-nAW"/>
+                            <constraint firstItem="ymW-Bb-BXH" firstAttribute="top" secondItem="Hds-Zs-ILV" secondAttribute="top" id="gIF-mf-u2m"/>
+                            <constraint firstItem="ymW-Bb-BXH" firstAttribute="leading" secondItem="Hds-Zs-ILV" secondAttribute="leading" id="hej-G7-Vsb"/>
+                            <constraint firstItem="Hds-Zs-ILV" firstAttribute="trailing" secondItem="ymW-Bb-BXH" secondAttribute="trailing" id="zNk-h5-Wd1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hds-Zs-ILV"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="M5k-T9-UBa" id="5NR-Du-S1W"/>
+                        <outlet property="team_bonusLabel" destination="4VT-15-EMg" id="rcM-IJ-53f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBw-Be-1LA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

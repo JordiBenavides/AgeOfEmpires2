@@ -30,5 +30,6 @@ class CustomTableViewCell: UITableViewCell {
         self.data = civilizations
         nameLabel.text = self.data?.name ?? ""
         armyTypeLabel.text = self.data?.army_type ?? ""
+        
     }
 }

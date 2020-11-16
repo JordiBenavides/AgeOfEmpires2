@@ -18,4 +18,5 @@ struct Civilizations: Codable {
     let id: Int
     let name: String
     let army_type: String
+    let team_bonus: String
 }
