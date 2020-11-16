@@ -18,6 +18,7 @@
 		9DA7BB5D255EF9E600BC81E2 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DA7BB5B255EF9E600BC81E2 /* CustomTableViewCell.xib */; };
 		9DA7BB5F255EFD8800BC81E2 /* CivilizationsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7BB5E255EFD8800BC81E2 /* CivilizationsAPI.swift */; };
 		9DA7BB61255EFDA000BC81E2 /* Civilizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7BB60255EFDA000BC81E2 /* Civilizations.swift */; };
+		9DA7BB65256281CE00BC81E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7BB64256281CE00BC81E2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9DA7BB5B255EF9E600BC81E2 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		9DA7BB5E255EFD8800BC81E2 /* CivilizationsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilizationsAPI.swift; sourceTree = "<group>"; };
 		9DA7BB60255EFDA000BC81E2 /* Civilizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Civilizations.swift; sourceTree = "<group>"; };
+		9DA7BB64256281CE00BC81E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C84384F532625CCD7FDF286C /* Pods-AgeOfEmpires2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgeOfEmpires2.debug.xcconfig"; path = "Target Support Files/Pods-AgeOfEmpires2/Pods-AgeOfEmpires2.debug.xcconfig"; sourceTree = "<group>"; };
 		E792E5D2A7A4875162049E89 /* Pods_AgeOfEmpires2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgeOfEmpires2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA7BB44255EEC7600BC81E2 /* ViewController.swift */,
+				9DA7BB64256281CE00BC81E2 /* DetailViewController.swift */,
 				9DA7BB55255EEFA600BC81E2 /* Cell */,
 			);
 			path = Controller;
@@ -273,6 +276,7 @@
 				9DA7BB41255EEC7600BC81E2 /* AppDelegate.swift in Sources */,
 				9DA7BB5C255EF9E600BC81E2 /* CustomTableViewCell.swift in Sources */,
 				9DA7BB43255EEC7600BC81E2 /* SceneDelegate.swift in Sources */,
+				9DA7BB65256281CE00BC81E2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

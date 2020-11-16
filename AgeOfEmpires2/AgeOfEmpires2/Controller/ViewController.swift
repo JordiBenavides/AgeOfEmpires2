@@ -12,13 +12,11 @@ import Moya
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
-    
     let provider = MoyaProvider<CivilizationsAPI>()
-
+    var data: [Civilizations]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         requestCivilization()
@@ -37,9 +35,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             switch result {
             case .success(let response):
                 print("success")
-//                let array = try! response.map([Movie].self)
-//                self.data = array
-//                self.tableView.reloadData()
+                let array: [Civilizations] = try! response.map(ResponseAPI.self).civilizations
+                self.data = array
+                self.tableView.reloadData()
             case .failure:
                 print("Error")
             }
@@ -48,12 +46,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          
-        return 0
+        return data?.count ?? 0
      }
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell
+        let civilization = data?[indexPath.row]
+        cell?.configure(civilizations: civilization)
+        
+        return cell ?? UITableViewCell()
      }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        //vc.data = data?[indexPath.row]
+            navigationController?.pushViewController(vc,
+                                               animated: true)
+    }
 }
 

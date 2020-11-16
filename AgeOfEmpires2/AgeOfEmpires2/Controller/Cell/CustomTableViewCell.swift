@@ -13,15 +13,22 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var armyTypeLabel: UILabel!
     
+    var data: Civilizations?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
+    func configure(civilizations: Civilizations?) {
+        
+        self.data = civilizations
+        nameLabel.text = self.data?.name ?? ""
+        armyTypeLabel.text = self.data?.army_type ?? ""
+    }
 }
